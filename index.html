@@ -9,33 +9,71 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
   </head>
   <body>
-    <div class="main">
-        <h1>Weather App....</h1>
-        <div class="mainDiv">
-            
-      <div style="display: flex; flex-direction: row;">
-        <input
-        type="text"
-        class="inputfeild"
-        placeholder="weather app..."
-        aria-label="Username"
-        aria-describedby="basic-addon1"
-        id="inputField"
-      />
-      <button onclick="searchData()" style="padding: 10px; border-radius: 10px;">search</button>
-      </div>
-          
-            <div id="showWeather">
-            
-            </div>
+    <!-- <div class="container-fluid"> -->
+      <div class=" row main">
+        <div class="leftSide  col-12 col-sm-12 col-md-6 col-lg-5 col-xl-6 col-xxl-6 order-2 order-sm-2" id="showWeather">
+         
+        </div>
+        <div class="rightSide col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 order-1 order-sm-1">
+          <div class="feildDiv">
+            <input
+              type="text"
+              placeholder="Search Location..."
+              aria-label="Search Location"
+              id="inputField"
+            />
+            <span class="searchIcon">
+              <i class="fas fa-search" onclick="searchData()"></i>
+            </span>
           </div>
+          <div class="weatherDetails">
+            <p>Weather Details...</p>
+            <ul class="detailsList">
+            <li id="tempMax">
+              <span>Temp max</span> <span>--° <i class="fas fa-thermometer-full"></i></span>
+            </li>
+            <li id="tempMin">
+              <span>Temp min</span> <span>--° <i class="fas fa-thermometer-empty"></i></span>
+            </li>
+            <li id="humidity">
+              <span>Humidity</span> <span>--% <i class="fas fa-tint"></i></span>
+            </li>
+            <li id="cloudy">
+              <span>Cloudy</span> <span>--% <i class="fas fa-cloud"></i></span>
+            </li>
+            <li id="wind">
+              <span>Wind</span> <span>-- km/h <i class="fas fa-wind"></i></span>
+            </li>
+          </ul>
+          </div>
+        </div>
         
-    </div>
+      </div>
+      
+    <!-- </div> -->
+   
+
+
+        
+    
  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </body>
 </html>
